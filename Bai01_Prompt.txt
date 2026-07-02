@@ -1,0 +1,63 @@
+===== BÀI TẬP 01: PHÂN TÍCH YÊU CẦU NGHIỆP VỤ eKYC =====
+===== FILE 01: TOÀN BỘ PROMPT ĐÃ SỬ DỤNG =====
+
+======================================================================
+PROMPT 1: Thiết lập vai trò và yêu cầu phân tích tổng quan
+======================================================================
+"Bạn hãy đóng vai một Senior Business Analyst có 10 năm kinh nghiệm trong lĩnh vực FinTech/Ngân hàng số. 
+Tôi cần bạn phân tích quy trình nghiệp vụ eKYC (Electronic Know Your Customer) cho Ngân hàng số ABC Bank.
+
+Bối cảnh: ABC Bank muốn số hóa hoàn toàn quy trình mở thẻ. Thay vì ra quầy, khách hàng có thể mở tài khoản thông qua quy trình eKYC. 
+Luồng cơ bản: Khách hàng tải app -> Đăng ký thông tin cơ bản -> Chụp ảnh 2 mặt CCCD -> Quét khuôn mặt (Liveness check) -> Hệ thống đối chiếu dữ liệu -> Cấp số tài khoản tự động nếu hợp lệ. 
+Mục tiêu cốt lõi: 'Zero manual operation' – giảm thiểu tối đa sự can thiệp của giao dịch viên.
+
+Yêu cầu: Hãy phân tích và trả về các thành phần sau:
+1. Actors (Các tác nhân tham gia hệ thống)
+2. Business Flow (Luồng nghiệp vụ từng bước chi tiết)
+3. Functional Requirements (Yêu cầu chức năng)
+4. Non-Functional Requirements (Yêu cầu phi chức năng: bảo mật, hiệu năng...)
+5. Assumptions & Business Rules (Giả định và Quy tắc nghiệp vụ của ngân hàng)"
+
+======================================================================
+PROMPT 2: Yêu cầu chuyển đổi thành User Story và Use Case
+======================================================================
+"Dựa trên phân tích nghiệp vụ eKYC ở trên, hãy giúp tôi chuyển đổi các yêu cầu thành:
+
+1. Danh sách User Story (Theo chuẩn 'As a... I want to... So that...') cho toàn bộ quy trình eKYC.
+
+2. Danh sách Use Case bao gồm:
+   - Tên Use Case
+   - Mô tả ngắn
+   - Actors chính
+   - Điều kiện tiên quyết (Preconditions)
+   - Luồng sự kiện chính (Basic Flow)
+   - Luồng thay thế (Alternative Flow)
+   - Điều kiện kết thúc (Postconditions)
+
+Hãy trình bày chi tiết và có cấu trúc rõ ràng."
+
+======================================================================
+PROMPT 3: Yêu cầu bổ sung chi tiết cho từng module
+======================================================================
+"Với các Use Case đã xác định, hãy phân tích sâu hơn cho từng module chính:
+
+Module 1 - Đăng ký thông tin cơ bản:
+- Các trường dữ liệu cần thu thập
+- Quy tắc validation cho từng trường
+- Xử lý trùng lặp thông tin
+
+Module 2 - Xác thực giấy tờ (OCR):
+- Loại giấy tờ hỗ trợ (CCCD/CMND)
+- Các trường dữ liệu cần trích xuất từ ảnh
+- Độ chính xác tối thiểu yêu cầu
+
+Module 3 - Xác thực khuôn mặt (Liveness):
+- Các phương thức kiểm tra (chớp mắt, quay đầu...)
+- Ngưỡng điểm tin cậy (confidence score)
+
+Module 4 - Kích hoạt tài khoản:
+- Quy tắc sinh số tài khoản
+- Các bước kiểm tra trước khi kích hoạt
+- Thông báo kết quả cho khách hàng
+
+Hãy trình bày chi tiết từng module."
